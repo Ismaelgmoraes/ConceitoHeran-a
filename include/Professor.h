@@ -7,12 +7,17 @@
 class Professor : public Pessoa
 {
     public:
-    std::string Departamento;
-    void EfetuarChamada();
-    void EntregarPauta();
-    Professor(){}
-    Professor(std::string NovoNome, int NovoCPF, int NovaMatricula,
-    std::string NovoDepartamento):Pessoa(NovoNome, NovoCPF, NovaMatricula), Departamento(NovoDepartamento){}
+        void EfetuarChamada();
+        void EntregarPauta();
+        std::string GetDepartamento();
+        void SetDepartamento(std::string Departamento);
+        void MostrarDados();
+        Professor(){}
+        Professor(std::string NovoNome, int NovoCPF, int NovaMatricula,
+        std::string NovoDepartamento):Pessoa(NovoNome, NovoCPF, NovaMatricula), Departamento(NovoDepartamento){}
+
+    private:
+        std::string Departamento;
 };
 
 #endif // PROFESSOR_H

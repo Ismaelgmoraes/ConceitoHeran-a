@@ -7,12 +7,17 @@
 
 class Aluno : public Pessoa
 {
-  public:
-    std::string Curso;
-    Aluno(){}
-    Aluno(std::string NovoNome, int NovoCPF, int NovaMatricula, std::string NovoCurso):Pessoa(NovoNome, NovoCPF,
-    NovaMatricula), Curso(NovoCurso){}
-    void RealizarProva();
+    public:
+        Aluno(): Curso("") {}
+        Aluno(std::string NovoNome, int NovoCPF, int NovaMatricula, std::string NovoCurso):Pessoa(NovoNome, NovoCPF,
+        NovaMatricula), Curso(NovoCurso){}
+        void RealizarProva();
+        std::string GetCurso();
+        void SetCurso(std::string Curso);
+        void MostrarDados();
+
+    private:
+        std::string Curso;
 };
 
 #endif // ALUNO_H
